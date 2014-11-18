@@ -1,0 +1,110 @@
+/* ICAMMA - 2015 Styles*/
+/*
+Colors :
+BG - #edeef0 - Light blue
+
+}*/
+/* Header Title*/
+#branding {
+	padding: 34px 0 35px;
+}
+#header-wrapper header, #branding .h-group, #branding {
+	display: block;
+}
+header.page-title {
+	padding-top: 7px;
+	border-top: 7px solid #dedede;
+	border-bottom: 7px solid #dedede;
+}
+div#block-logintoboggan-logintoboggan-logged-in {
+	color: #fff;
+}
+#block-search-form {
+	float: right !important;
+}
+#search-block-form {
+	margin: 0.4em 0 0 0;
+}
+#block-search-form input.form-text {
+	width: 225px;
+	margin-bottom: 0;
+}
+/*Registration Form*/
+form#registration-node-form div.form-type-radio {
+	display: inline;
+}
+form#registration-node-form select#edit-field-name-und-0-title {
+	padding: 4px;
+	height: 34px;
+}
+/*Abstract Form*/
+div.grippie {
+	display: none;
+}
+/*Radio Buttons*/
+label span.form-required {
+  display:none;
+}
+div.form-wrapper, div.form-actions {
+	clear:both;
+}
+/*div.form-type-radio {
+	clear: both;
+	margin: 0 50px;
+}*/
+div.form-type-radio label {
+	width: auto;
+	border-radius: 3px;
+	border: 1px solid #D1D3D4;
+	padding: 0 5px 0 0;
+	margin: 5px;
+}
+/* hide input */
+div.form-type-radio input.form-radio:empty {
+	margin-left: -99999px;
+}
+/* style label */
+div.form-type-radio input.form-radio:empty ~ label {
+	position: relative;
+	float: left;
+	text-indent: 2.5em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+div.form-type-radio input.form-radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2em;
+	background: #D1D3D4;
+	border-radius: 3px 0 0 3px;
+}
+/* toggle hover */
+div.form-type-radio input.form-radio:hover:not(:checked) ~ label:before {
+	content: '\2714';
+	text-indent: .5em;
+	color: #C2C2C2;
+}
+div.form-type-radio input.form-radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+/* toggle on */
+div.form-type-radio input.form-radio:checked ~ label:before {
+	content: '\2714';
+	text-indent: .5em;
+	color: #9CE2AE;
+	background-color: #4DCB6D;
+}
+div.form-type-radio input.form-radio:checked ~ label {
+	color: #777;
+}
+/* radio focus */
+/*div.form-type-radio input.form-radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}*/

@@ -1,0 +1,7 @@
+/** ie CSS */
+.nav .block-menu ul a:focus,
+.nav .block-menu ul a:hover,
+.nav .block-menu ul a:active,
+.nav .block-menu ul a:visited {
+  background: #e25402;
+}

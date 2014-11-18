@@ -1,0 +1,23 @@
+1. Remove BreadCrumbs - Solved - page.tpl.php
+2. Rename Create Submit Abstract Title - Solved (Refer i)
+3. WYSIWYG editor - Hide Text format option and Hide bottom panel - Solved
+4. Add Search Block - Solved
+6. Create Favicon
+7. Access to "Submit abstract" Menu for authenticated users only - Solved
+8. Provide a link to Registration Page for Access Denied Pages 
+9. Submit Abstract only once - Solved
+10. Remove title field from content types - Wont Solve
+
+12. Generate unique id for Submit Abstract - Pending
+13. Change "Save" to "Submit" incase of abstract and paper submission
+14. Install Chosen plugin
+15. Users Cannot Modify account information after creating account
+16. Remove contact form from user profile page - Solve (Removed editing capabilities for users)
+17. Module for thesis
+18. Update ROBOTS.txt
+18. Update .htaccess
+19. Set Private Folder
+20. Modify Abstract and Paper Submission Message
+21. Maxlength - Bug 
+
+i. Ask stackex if changing content creation title method is correct ?
