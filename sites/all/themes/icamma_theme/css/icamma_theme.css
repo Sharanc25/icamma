@@ -2,6 +2,7 @@
 /*
 Colors :
 BG - #edeef0 - Light blue
+#e0e0e0 - Windows Live Grey
 
 }*/
 /* Header Title*/
@@ -11,13 +12,17 @@ BG - #edeef0 - Light blue
 #header-wrapper header, #branding .h-group, #branding {
 	display: block;
 }
-header.page-title {
-	padding-top: 7px;
-	border-top: 7px solid #dedede;
-	border-bottom: 7px solid #dedede;
+h1#page-title, .in-maintenance h1#page-title {
+	padding: 14px;
+	background: #dedede;
 }
-div#block-logintoboggan-logintoboggan-logged-in {
-	color: #fff;
+.content-style {
+  border: none;
+}
+#block-system-help {
+  background: none;
+  border:none;
+  margin-top: 25px;
 }
 #block-search-form {
 	float: right !important;
@@ -28,6 +33,9 @@ div#block-logintoboggan-logintoboggan-logged-in {
 #block-search-form input.form-text {
 	width: 225px;
 	margin-bottom: 0;
+}
+section#main-content {
+	width: 100%;
 }
 /*Registration Form*/
 form#registration-node-form div.form-type-radio {
@@ -41,22 +49,53 @@ form#registration-node-form select#edit-field-name-und-0-title {
 div.grippie {
 	display: none;
 }
-/*Radio Buttons*/
+/*==============================================Horizontal Tabs=============================================*/
+div.horizontal-tabs {
+	border-top: none;
+}
+.horizontal-tabs ul.horizontal-tabs-list li:hover, .horizontal-tabs ul.horizontal-tabs-list li:focus {
+	background-color: #fff;
+    box-shadow: 5px inset #fff;
+}
+.horizontal-tabs ul.horizontal-tabs-list li a:hover, .horizontal-tabs ul.horizontal-tabs-list li:hover {
+	background-color: #fff;
+}
+.horizontal-tabs ul.horizontal-tabs-list {
+	border-bottom: 1px solid #ccc;
+	border-right: none;
+	border-collapse: collapse;
+	list-style: outside none none;
+	background: #fff;
+	white-space: nowrap;
+	width: 100.1%;
+}
+.horizontal-tabs ul.horizontal-tabs-list li {
+	border-top: 1px solid #ccc;
+	margin-right: 10px;
+	display:inline;
+	z-index: 999;
+}
+.horizontal-tabs ul.horizontal-tabs-list li.last {
+	border-left: 1px solid #ccc;
+}
+/*div.horizontal-tabs-panes{
+  border-top:1px solid #ccc;
+  border-right:1px solid #ccc;
+  margin-top:-8px;
+}*/
+/*==============================================Horizontal Tabs - End=============================================*/
+
+/*==============================================Radio Buttons=============================================*/
 label span.form-required {
-  display:none;
+	display: none;
 }
 div.form-wrapper, div.form-actions {
-	clear:both;
-}
-/*div.form-type-radio {
 	clear: both;
-	margin: 0 50px;
-}*/
+}
 div.form-type-radio label {
 	width: auto;
-	border-radius: 3px;
 	border: 1px solid #D1D3D4;
-	padding: 0 5px 0 0;
+	padding: 0 4px 0 0;
 	margin: 5px;
 }
 /* hide input */
@@ -67,7 +106,7 @@ div.form-type-radio input.form-radio:empty {
 div.form-type-radio input.form-radio:empty ~ label {
 	position: relative;
 	float: left;
-	text-indent: 2.5em;
+	text-indent: 2.4em;
 	cursor: pointer;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -82,8 +121,8 @@ div.form-type-radio input.form-radio:empty ~ label:before {
 	left: 0;
 	content: '';
 	width: 2em;
-	background: #D1D3D4;
-	border-radius: 3px 0 0 3px;
+	background: /*#D1D3D4*/#fff;
+	border-right: 1px solid #D1D3D4;
 }
 /* toggle hover */
 div.form-type-radio input.form-radio:hover:not(:checked) ~ label:before {
@@ -108,3 +147,46 @@ div.form-type-radio input.form-radio:checked ~ label {
 /*div.form-type-radio input.form-radio:focus ~ label:before {
 	box-shadow: 0 0 0 3px #999;
 }*/
+/*==============================================Radio Buttons - End=============================================*/
+
+/*==============================================Submit Buttons=============================================*/
+input.form-button, input.form-submit {
+	background: #9fc748/*#1ba1e2*/;
+	outline: none;
+	border: 1px solid #d8d8d8;
+}
+input.form-button:hover, input.form-submit:hover {
+	background-color: #e25400;
+}
+input.form-button:active, input.form-submit:active {
+	background-color: #d9d9d9;
+}
+input#edit-submit {
+	font-weight: bold;
+	color: #fff;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	padding: 20px;
+}
+/*==============================================Submit Buttons - End=============================================*/
+
+
+.chosen-container-single .chosen-single {
+	height: 34px;
+	line-height: 34px;
+	font-size: 16px;
+	border-top-left-radius: none !important;
+	border-top-right-radius: none !important;
+	border-bottom-right-radius: none !important;
+	border-bottom-left-radius: none !important;
+}
+.chosen-container-single .chosen-single div b {
+	background-position: 0 8px;
+}
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+	background-position: -18px 8px;
+}
+.chosen-container .chosen-results li.highlighted {
+	background: #e25400;
+}

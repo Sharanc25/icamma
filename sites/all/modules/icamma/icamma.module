@@ -28,8 +28,10 @@ function icamma_abstract_node_form_after_build($form) {
 function icamma_form_registration_node_form_alter(&$form, &$form_state) {
    $form['field_payment_verification']['#access'] = user_access('reviewer');
    $form['field_amount'][LANGUAGE_NONE]['0']['value']['#attributes']['disabled'] = TRUE;
+   $form['actions']['submit']['#value'] = t('Register for ICAMMA - 2015');
+   drupal_set_title(t('Register for AMMA - 2015'));
    unset($form['field_type_of_accommodation'][LANGUAGE_NONE]['#options']['_none']);
-   drupal_set_title(t('Register for ICAMMA - 2015'));
+   unset($form['field_type_accommodation_foreign'][LANGUAGE_NONE]['#options']['_none']);
    
 }
 

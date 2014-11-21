@@ -50,11 +50,6 @@ function conditional_fields_features_export_render($module_name, $data, $export 
 
     if (isset($dependencies[$entity]) && isset($dependencies[$entity][$bundle])) {
       $info = $dependencies[$entity][$bundle];
-
-      // Ensure that dependencies are always exported in the same order to
-      // avoid fake overrides.
-      ksort($info['dependents']);
-
       foreach ($info['dependents'] as $dependent_field_name => $dependees) {
         foreach ($dependees as $dependee) {
           $code[] = '';
@@ -86,11 +81,13 @@ function conditional_fields_features_export_render($module_name, $data, $export 
  * Implements hook_features_rebuild().
  */
 function conditional_fields_features_rebuild($module) {
-  $defaults = features_get_default('conditional_fields', $module);
+  $defaults = module_invoke($module, 'conditional_fields_default_fields');
+
+  $dependencies = conditional_fields_load_dependencies();
+  $instances = field_info_instances();
 
   if (!empty($defaults)) {
-    $dependencies = conditional_fields_load_dependencies();
-    $instances = field_info_instances();
+    $node_types = array();
     foreach ($defaults as $field) {
       if (isset($dependencies[$field['entity']][$field['bundle']])) {
         foreach ($dependencies[$field['entity']][$field['bundle']] as $dependancy_type => $field_dep_settings) {
@@ -109,7 +106,8 @@ function conditional_fields_features_rebuild($module) {
       $entity_instances = $instances[$field['entity']][$field['bundle']];
       $dependee_id = $entity_instances[$field['dependee']]['id'];
       $dependent_id = $entity_instances[$field['dependent']]['id'];
-      conditional_fields_dependency_insert($dependee_id, $dependent_id, $field['options']);
+      $options = $field['options'];
+      conditional_fields_dependency_insert($dependee_id, $dependent_id, $options);
     }
   }
 }

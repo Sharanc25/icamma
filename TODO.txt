@@ -1,5 +1,5 @@
 1. Remove BreadCrumbs - Solved - page.tpl.php
-2. Rename Create Submit Abstract Title - Solved (Refer i)
+2. Rename Page Titles - Solved - drupal_set_title
 3. WYSIWYG editor - Hide Text format option and Hide bottom panel - Solved
 4. Add Search Block - Solved
 6. Create Favicon
@@ -20,4 +20,3 @@
 20. Modify Abstract and Paper Submission Message
 21. Maxlength - Bug 
 
-i. Ask stackex if changing content creation title method is correct ?
