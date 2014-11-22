@@ -81,8 +81,6 @@ function icamma_form_contact_personal_form_alter(&$form, &$form_state) {
 function icamma_menu_alter(&$items) {
   $items['user/%user/edit']['access arguments'] = array('administer users');
   $items['user/%user/edit']['access callback'] = 'user_access';
-  //chain_menu_access_chain($items, 'user/%user/edit', 'icamma_check_permission');
+  $items['node/%node/register']['access arguments'] = array('administer users');
+  $items['node/%node/register']['access callback'] = 'user_access'; 
 }
-/*function icamma_check_permission() {
-  return (user_access('administer users')) ? TRUE : FALSE;
-}*/
