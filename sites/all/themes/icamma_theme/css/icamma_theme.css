@@ -38,18 +38,6 @@ h1#page-title, .in-maintenance h1#page-title {
 section#main-content {
 	width: 100%;
 }
-/*Registration Form*/
-form#registration-node-form div.form-type-radio {
-	display: inline;
-}
-form#registration-node-form select#edit-field-name-und-0-title {
-	padding: 4px;
-	height: 34px;
-}
-/*Abstract Form*/
-div.grippie {
-	display: none;
-}
 table#organisers {
   border: none;
 }
@@ -98,6 +86,29 @@ div.horizontal-tabs {
   margin-top:-8px;
 }*/
 /*==============================================Horizontal Tabs - End=============================================*/
+
+/*==============================================Forms=============================================*/
+/*Registration Form*/
+form#registration-form .form-checkboxes .form-item, .form-radios .form-item {
+	display: inline;
+}
+form#registration-form select#edit-field-name-und-0-title {
+	padding: 4px;
+	height: 34px;
+}
+input.form-text, input.form-password, input.form-file, textarea {
+  border-radius: 0;
+}
+form#registration-form div.registration-who-msg {
+  display: none;
+}
+/*Abstract Form*/
+div.grippie {
+	display: none;
+}
+/*==============================================Forms - End=============================================*/
+
+
 
 /*==============================================Radio Buttons=============================================*/
 label span.form-required {
@@ -190,10 +201,7 @@ input#edit-submit {
 	height: 34px;
 	line-height: 34px;
 	font-size: 16px;
-	border-top-left-radius: none !important;
-	border-top-right-radius: none !important;
-	border-bottom-right-radius: none !important;
-	border-bottom-left-radius: none !important;
+	border-radius: 0;
 }
 .chosen-container-single .chosen-single div b {
 	background-position: 0 8px;
