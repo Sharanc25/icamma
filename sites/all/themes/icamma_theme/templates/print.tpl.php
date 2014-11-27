@@ -14,11 +14,12 @@
     <?php print $css; ?>
   </head>
   <body>
-    <?php $query = "SELECT users.uid AS uid, 'user' AS field_data_field_name_user_entity_type, 'user' AS field_data_field_affiliation_user_entity_type FROM {users} users INNER JOIN {users_roles} users_roles ON users.uid = users_roles.uid WHERE (( (users_roles.rid = '3') ))";
-	$result = db_query($query);
-	
-	dpm($result);
-	
+    <?php 
+	$view = views_get_view_result('Certificate');
+dpm($view);
+foreach($view as $result){
+    print_r($result);
+}
 	
 	?>
   </body>

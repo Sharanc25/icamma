@@ -38,6 +38,10 @@ h1#page-title, .in-maintenance h1#page-title {
 section#main-content {
 	width: 100%;
 }
+div#footer-wrapper div.block-content {
+  text-align:center;
+}
+/*==============================================Tabels=============================================*/
 table#organisers {
   border: none;
 }
@@ -48,9 +52,14 @@ table#organisers tr td {
 table#organisers tr td:first-child {
   border-right: 1px solid #eee;
 }
-div#footer-wrapper div.block-content {
-  text-align:center;
+
+table.views-table tr td a{
+    display: block;
 }
+
+
+/*==============================================Tabels END=============================================*/
+
 /*==============================================Horizontal Tabs=============================================*/
 div.horizontal-tabs {
 	border-top: none;
