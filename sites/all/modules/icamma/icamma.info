@@ -1,7 +1,0 @@
-name = ICAMMA
-description = Module for ICAMMA - 2015 Website.
-core = 7.x
-package = ICAMMA
-dependencies[] = chain_menu_access
-dependencies[] = menu
-dependencies[] = path
