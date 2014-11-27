@@ -1,0 +1,87 @@
+<?php
+// TODO :
+/**
+ * Implements hook_form_alter().
+ * Used to make 'Selection Criteria' option accessible only by reviewers and admins
+ */
+function amma_form_abstract_node_form_alter(&$form, &$form_state) {
+     $form['field_selection_criteria']['#access'] = user_access('reviewer');
+     $form['#after_build'][] = 'amma_abstract_node_form_after_build'; //remove Input HTML select option
+    // Custom Button Text for Upload Forms
+    $form['actions']['submit']['#value'] = t('Submit Abstract');
+    // Custom Submit Messages for Upload Forms
+     $form['#submit'][] = 'amma_abstract_message';
+     drupal_set_title(t('Submit Abstract'));
+}
+// afterbuild function to remove Input HTML select option
+function amma_abstract_node_form_after_build($form) {
+  // We want this on a specific field
+  $form['field_abstract'][LANGUAGE_NONE]['0']['format']['#access'] = user_access('reviewer');
+  return $form;
+}
+
+
+/**
+ * Implements hook_form_alter().
+ * Changes Page title and makes transaction verification accessible only to Reviewers
+ */
+//function amma_form_alter(&$form, &$form_state, $form_id){
+  //if ($form_id == 'registration_form') {
+function amma_form_registration_form_alter(&$form, &$form_state) {
+   $form['field_amount'][LANGUAGE_NONE]['0']['value']['#attributes']['disabled'] = TRUE;
+   $form['actions']['submit']['#value'] = t('Register for ICAMMA - 2015');
+   //drupal_set_title(t('Register for AMMA - 2015'));
+   unset($form['field_type_of_accommodation'][LANGUAGE_NONE]['#options']['_none']);
+   unset($form['field_type_accommodation_foreign'][LANGUAGE_NONE]['#options']['_none']);
+//  }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ * Used to make 'Selection Criteria' option accessible only by reviewers and admins
+ */
+function amma_form_paper_node_form_alter(&$form, &$form_state) {
+    $form['field_selection_criteria']['#access'] = user_access('reviewer');
+    // Custom Button Text for Upload Forms
+    $form['actions']['submit']['#value'] = t('Submit Full Paper');
+    // Custom Submit Messages for Upload Forms
+    $form['#submit'][] = 'amma_paper_message';
+    drupal_set_title(t('Upload Paper'));
+    //Remove n/a from radio buttons
+    //unset($form['field_selection_criteria']['und']['#options']['_none']);
+}
+
+function amma_abstract_message($form, &$form_state){
+    $messages = drupal_get_messages('status');
+    drupal_set_message(t("Your Abstract has been submitted successfully. Keep checking this website for more updates."));
+}
+function amma_paper_message($form, &$form_state){
+  $messages = drupal_get_messages('status');
+  drupal_set_message(t("Your Paper has been submitted successfully. Keep checking this website for more updates."));
+}
+
+/**
+ * Implements hook_form_alter().
+ * Remove 'CC' option from contact form
+ */
+function amma_form_contact_site_form_alter(&$form, &$form_state) {
+  unset($form['copy']);
+  //$form['copy']['#access'] = FALSE; //This will also work
+}
+function amma_form_contact_personal_form_alter(&$form, &$form_state) {
+  unset($form['copy']);
+  //$form['copy']['#access'] = FALSE; //This will also work
+}
+
+
+/**
+ * Implements hook_menu_alter().
+ * Prevent users from editing their profiles
+ */
+function amma_menu_alter(&$items) {
+  $items['user/%user/edit']['access arguments'] = array('administer users');
+  $items['user/%user/edit']['access callback'] = 'user_access';
+  $items['node/%node/register']['access arguments'] = array('administer users');
+  $items['node/%node/register']['access callback'] = 'user_access'; 
+}
