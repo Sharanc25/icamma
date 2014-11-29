@@ -18,5 +18,5 @@
 18. Update .htaccess
 19. Set Private Folder
 20. Modify Abstract and Paper Submission Message
-21. Maxlength - Bug 
+21. Hide error messages in production site - admin/config/development/logging
 
