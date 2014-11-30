@@ -12,18 +12,23 @@ BG - #edeef0 - Light blue
 #header-wrapper header, #branding .h-group, #branding {
 	display: block;
 }
+header.page-title {
+	background: #2e2e2d;
+	color: #fff;
+	margin-bottom: 10px;
+}
 h1#page-title, .in-maintenance h1#page-title {
 	padding: 14px;
-	background: #dedede;
+	margin: 0;
 }
 .content-style {
-  border: none;
-  background:none;
+	border: none;
+	background: none;
 }
 #block-system-help {
-  background: none;
-  border:none;
-  margin-top: 25px;
+	background: none;
+	border: none;
+	margin-top: 25px;
 }
 #block-search-form {
 	float: right !important;
@@ -39,25 +44,26 @@ section#main-content {
 	width: 100%;
 }
 div#footer-wrapper div.block-content {
-  text-align:center;
+	text-align: center;
 }
 /*==============================================Tabels=============================================*/
-table#organisers {
-  border: none;
+article#node-4 table {
+	border: none;
 }
-table#organisers tr td {
-  width: 50%;
-  border: none;
+article#node-4 table tbody {
+	border: none;
 }
-table#organisers tr td:first-child {
-  border-right: 1px solid #eee;
+article#node-4 table tr td {
+	width: 50%;
+	border: none;
+	text-align:left;
 }
-
-table.views-table tr td a{
-    display: block;
+article#node-4 table tr td:first-child {
+	border-right: 1px solid #eee;
 }
-
-
+table.views-table tr td a {
+	display: block;
+}
 /*==============================================Tabels END=============================================*/
 
 /*==============================================Horizontal Tabs=============================================*/
@@ -66,7 +72,7 @@ div.horizontal-tabs {
 }
 .horizontal-tabs ul.horizontal-tabs-list li:hover, .horizontal-tabs ul.horizontal-tabs-list li:focus {
 	background-color: #fff;
-    box-shadow: 5px inset #fff;
+	box-shadow: 5px inset #fff;
 }
 .horizontal-tabs ul.horizontal-tabs-list li a:hover, .horizontal-tabs ul.horizontal-tabs-list li:hover {
 	background-color: #fff;
@@ -83,7 +89,7 @@ div.horizontal-tabs {
 .horizontal-tabs ul.horizontal-tabs-list li {
 	border-top: 1px solid #ccc;
 	margin-right: 10px;
-	display:inline;
+	display: inline;
 	z-index: 999;
 }
 .horizontal-tabs ul.horizontal-tabs-list li.last {
@@ -106,10 +112,10 @@ form#registration-form select#edit-field-name-und-0-title {
 	height: 34px;
 }
 input.form-text, input.form-password, input.form-file, textarea {
-  border-radius: 0;
+	border-radius: 0;
 }
 form#registration-form div.registration-who-msg {
-  display: none;
+	display: none;
 }
 /*Abstract Form*/
 div.grippie {
