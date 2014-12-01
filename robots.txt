@@ -24,6 +24,7 @@ Disallow: /MAINTAINERS.txt
 Disallow: /update.php
 Disallow: /UPGRADE.txt
 Disallow: /xmlrpc.php
+
 # Paths (clean URLs)
 Disallow: /admin/
 Disallow: /comment/reply/
@@ -35,9 +36,11 @@ Disallow: /user/password/
 Disallow: /user/login/
 Disallow: /user/logout/
 Disallow: /user/
-Disallow: /abstracts/
-Disallow: /submit-abstract/
+Disallow: /submitted-abstract
+Disallow: /abstract/
 Disallow: /upload-full-paper/
+
+
 # Paths (no clean URLs)
 Disallow: /?q=admin/
 Disallow: /?q=comment/reply/
@@ -49,6 +52,6 @@ Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
 Disallow: /?q=user/
-Disallow: /?q=abstracts/
-Disallow: /?q=submit-abstract/
+Disallow: /?q=submitted-abstract
+Disallow: /?q=abstract/
 Disallow: /?q=upload-full-paper/
