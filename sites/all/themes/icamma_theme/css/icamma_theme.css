@@ -9,9 +9,6 @@ BG - #edeef0 - Light blue
 #branding {
 	padding: 34px 0 35px;
 }
-#header-wrapper header, #branding .h-group, #branding {
-	display: block;
-}
 header.page-title {
 	background: #2e2e2d;
 	color: #fff;
@@ -56,10 +53,14 @@ article#node-4 table tbody {
 article#node-4 table tr td {
 	width: 50%;
 	border: none;
-	text-align:left;
+	text-align: left;
 }
 article#node-4 table tr td:first-child {
 	border-right: 1px solid #eee;
+}
+article#node-5 table { /**/
+	margin: auto;
+	width: 500px;
 }
 table.views-table tr td a {
 	display: block;
@@ -191,7 +192,7 @@ div.form-type-radio input.form-radio:checked ~ label {
 
 /*==============================================Submit Buttons=============================================*/
 input.form-button, input.form-submit {
-	background: #9fc748/*#1ba1e2*/;
+	background: #2e2e2d;
 	outline: none;
 	border: 1px solid #d8d8d8;
 }
@@ -217,6 +218,10 @@ input#edit-submit {
 	line-height: 34px;
 	font-size: 16px;
 	border-radius: 0;
+	background: none;
+}
+.chosen-container-active.chosen-with-drop .chosen-single {
+	background: none;
 }
 .chosen-container-single .chosen-single div b {
 	background-position: 0 8px;
@@ -226,4 +231,13 @@ input#edit-submit {
 }
 .chosen-container .chosen-results li.highlighted {
 	background: #e25400;
+}
+.chosen-drop {
+	scrollbar-face-color: #000000;
+	scrollbar-shadow-color: #2D2C4D;
+	scrollbar-highlight-color: #7D7E94;
+	scrollbar-3dlight-color: #7D7E94;
+	scrollbar-darkshadow-color: #2D2C4D;
+	scrollbar-track-color: #7D7E94;
+	scrollbar-arrow-color: #C1C1D1;
 }
