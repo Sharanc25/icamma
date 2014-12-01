@@ -29,7 +29,7 @@ function amma_abstract_node_form_after_build($form) {
   //if ($form_id == 'registration_form') {
 function amma_form_registration_form_alter(&$form, &$form_state) {
    $form['field_amount'][LANGUAGE_NONE]['0']['value']['#attributes']['disabled'] = TRUE;
-   $form['actions']['submit']['#value'] = t('Register for ICAMMA - 2015');
+   $form['actions']['submit']['#value'] = t('Register for AMMA - 2015');
    //drupal_set_title(t('Register for AMMA - 2015'));
    unset($form['field_type_of_accommodation'][LANGUAGE_NONE]['#options']['_none']);
    unset($form['field_type_accommodation_foreign'][LANGUAGE_NONE]['#options']['_none']);
