@@ -5,17 +5,17 @@
  * Used to make 'Selection Criteria' option accessible only by reviewers and admins
  */
 function amma_form_abstract_node_form_alter(&$form, &$form_state) {
-     $form['field_selection_criteria']['#access'] = user_access('reviewer');
+     $form['field_selection_criteria']['#access'] = user_access('reviewer'); // Prevents access to Admin Fields
+	 $form['field_presentation_slot']['#access'] = user_access('reviewer');
      $form['#after_build'][] = 'amma_abstract_node_form_after_build'; //remove Input HTML select option
     // Custom Button Text for Upload Forms
-    $form['actions']['submit']['#value'] = t('Submit Abstract');
+    $form['actions']['submit']['#value'] = t('Submit Abstract to AmmA - 2015');
     // Custom Submit Messages for Upload Forms
      $form['#submit'][] = 'amma_abstract_message';
      drupal_set_title(t('Submit Abstract'));
 }
 // afterbuild function to remove Input HTML select option
 function amma_abstract_node_form_after_build($form) {
-  // We want this on a specific field
   $form['field_abstract'][LANGUAGE_NONE]['0']['format']['#access'] = user_access('reviewer');
   return $form;
 }
