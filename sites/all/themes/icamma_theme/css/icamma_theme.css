@@ -43,6 +43,13 @@ section#main-content {
 div#footer-wrapper div.block-content {
 	text-align: center;
 }
+/* Menu Highlight Fix for IE*/
+.nav .block-menu ul li:focus, .nav .block-menu ul li:hover, .nav .block-menu ul li:active{
+ background: #e25402;
+}
+.nav .block-menu ul a:visited {
+	background: none;
+}
 /*==============================================Tabels=============================================*/
 article#node-4 table {
 	border: none;
