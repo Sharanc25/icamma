@@ -29,6 +29,27 @@
     }
   };
 
+  var formatInterval = function(interval) {
+    var granularity = 2;
+    var output = '';
+    $.each([24 * 60 * 60, 60 * 60, 60, 1], function(i, value) {
+      if (interval >= value) {
+        var count = Math.floor(interval / value);
+        var plural =
+          i == 0 ? Drupal.formatPlural(count, '1 day', '@count days') :
+          i == 1 ? Drupal.formatPlural(count, '1 hour', '@count hours') :
+          i == 2 ? Drupal.formatPlural(count, '1 min', '@count min') : Drupal.formatPlural(count, '1 sec', '@count sec');
+        output += (output ? ' ' : '') + plural;
+        interval %= value;
+        granularity--;
+      }
+      if (!granularity) {
+        return false;
+      }
+    });
+    return output ? output : Drupal.t('0 sec');
+  };
+
   var updateFileList = function(r, $drop) {
     $('.file-list', $drop).remove();
     if (r.files.length) {
@@ -44,6 +65,7 @@
       });
       $drop.prepend($ul);
     }
+    $drop.siblings('.button.browse').toggleClass('disabled', !canAddFiles(r));
     updateUploadButton($drop.siblings('.button.upload'), r);
   };
 
@@ -72,6 +94,15 @@
     $upload.html('<span>' + (uploading ? Drupal.t('Cancel') : Drupal.t('Upload')) + '</span>').toggleClass('cancel', uploading).toggleClass('disabled', !r.files.length);
   };
 
+  var canAddFiles = function(r) {
+    var maxFiles = r.options.maxFiles;
+    return !maxFiles || maxFiles == 1 || r.files.length < maxFiles;
+  };
+
+  var now = function() {
+    return (new Date()).getTime();
+  };
+
   // Drupal behavior.
   Drupal.behaviors.fileResup = {
     attach: function(context, settings) {
@@ -79,7 +110,7 @@
         this.id = 'file-resup-' + _index++;
         var $this = $(this).val('');
         var $wrapper = $this.closest('.file-resup-wrapper');
-        var bar, completing;
+        var bar, completing, progressMessage, lastTime;
 
         // Ensure browser supports Resup.
         if (!Resup.support) {
@@ -110,7 +141,9 @@
 
         // Add the drop area.
         var $drop = $('<div class="item-list drop"><div class="drop-message">' + $this.data('drop-message') + '</div></div>').bind('drop', function(e) {
-          clearErrors($wrapper);
+          if (canAddFiles(r)) {
+            clearErrors($wrapper);
+          }
           e.preventDefault();
         }).appendTo($wrapper);
 
@@ -139,8 +172,10 @@
 
         // Add the Browse button.
         $('<a href="#" class="button browse"><span>' + Drupal.t('Browse') + '</span></a>').click(function(e) {
-          clearErrors($wrapper);
-          $input.click();
+          if (canAddFiles(r)) {
+            clearErrors($wrapper);
+            $input.click();
+          }
           e.preventDefault();
         }).appendTo($wrapper).after($input);
 
@@ -160,6 +195,7 @@
               }
               bar.setProgress(0, Drupal.t('Starting upload...'));
               bar.element.show();
+              lastTime = 0;
               r.retry();
               updateUploadButton($upload, r);
             }
@@ -169,10 +205,12 @@
 
         // Handle the resupaddedfileerror event.
         r.onresupaddedfileerror = function(file, error) {
-          addError($wrapper, error == 'size' ? Drupal.t('File %filename is %filesize, exceeding the maximum file size of %maxsize.', {
+          addError($wrapper, error == 'size' ? file.size ? Drupal.t('File %filename is %filesize, exceeding the maximum file size of %maxsize.', {
               '%filename': file.name,
               '%filesize': formatSize(file.size),
               '%maxsize': formatSize(maxFileSize)
+            }) : Drupal.t('File %filename is empty. Empty files cannot be uploaded.', {
+              '%filename': file.name
             }) : Drupal.t('File %filename cannot be uploaded. Only files with the following extensions are allowed: %extensions.', {
               '%filename': file.name,
               '%extensions': extensions.join(', ')
@@ -182,19 +220,40 @@
 
         // Handle the resupfilesadded event.
         r.onresupfilesadded = function(addedFiles, skipped) {
-          if (skipped > 1 && $('.file-upload-js-error', $wrapper).length) {
+          var errors = $('.file-upload-js-error', $wrapper).length;
+          if (skipped > 1 && errors) {
             addError($wrapper, Drupal.t('@count files in total were skipped.', {'@count': skipped}));
           }
           if (addedFiles.length) {
             updateFileList(r, $drop);
+            if (!r.uploading && !errors && $this.data('autostart')) {
+              $upload.click();
+            }
           }
         };
 
         // Handle the resupprogress event.
         r.onresupprogress = function() {
           var p = r.getProgress();
-          var message = p < 1 ? Drupal.t('Uploading...') : Drupal.t('Completing upload...');
-          bar.setProgress((Math.round(p * 1000) / 10).toFixed(1), message);
+          if (p) {
+            if (p < 1) {
+              if (!lastTime) {
+                progressMessage = Drupal.t('Uploading...');
+              }
+              var time = now(), remaining;
+              if (time - lastTime > 999) {
+                lastTime = time;
+                remaining = r.getTime();
+                if (remaining > -1) {
+                  progressMessage = Drupal.t('Uploading... (@time remaining)', {'@time': formatInterval(remaining)});
+                }
+              }
+            }
+            else {
+              progressMessage = Drupal.t('Completing upload...');
+            }
+            bar.setProgress((Math.round(p * 1000) / 10).toFixed(1), progressMessage);
+          }
         };
 
         // Handle the resupended event.
