@@ -81,7 +81,12 @@ function amma_form_contact_personal_form_alter(&$form, &$form_state) {
  */
 function amma_node_view($node, $view_mode, $langcode) {
 //TODO: Check if hook_node_view_alter() is a better option than this function.
- dpm($node);
+ $selection_criteria = field_get_items('node',$node,'field_selection_criteria')[0]['value'];
+   if($selection_criteria === 'pending' || $selection_criteria === 'rejected') {
+	    $node->content['field_presentation_slot']['#access'] = FALSE;
+		//$node->content['field_selection_criteria']['#access'] = FALSE;
+   }
+ 
 }
 
 /**
@@ -91,6 +96,7 @@ function amma_node_view($node, $view_mode, $langcode) {
 function amma_menu_alter(&$items) {
   $items['user/%user/edit']['access arguments'] = array('administer users');
   $items['user/%user/edit']['access callback'] = 'user_access';
+  
   $items['node/%node/register']['access arguments'] = array('administer users');
   $items['node/%node/register']['access callback'] = 'user_access'; 
 }
