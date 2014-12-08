@@ -225,10 +225,10 @@ input#edit-submit {
 	line-height: 34px;
 	font-size: 16px;
 	border-radius: 0;
-	background: none;
+	background: #fff;
 }
 .chosen-container-active.chosen-with-drop .chosen-single {
-	background: none;
+	background: #fff;
 }
 .chosen-container-single .chosen-single div b {
 	background-position: 0 8px;
