@@ -1,12 +1,13 @@
-1. Remove BreadCrumbs - Solved - page.tpl.php
+1. Remove BreadCrumbs - Solved - corolla theme settings
 2. Rename Page Titles - Solved - drupal_set_title
 3. WYSIWYG editor - Hide Text format option and Hide bottom panel - Solved
-4. Add Search Block - Solved
-6. Create Favicon
+4. Add Search Block - 
+6. Create Favicon - Temp Favicon
 7. Access to "Submit abstract" Menu for authenticated users only - Solved
 8. Provide a link to Registration Page for Access Denied Pages 
 9. Submit Abstract only once - Solved
 10. Remove title field from content types - Wont Solve
+11. Remove Error Reporting from Index.php - in production site
 
 12. Generate unique id for Submit Abstract - Pending
 13. Change "Save" to "Submit" incase of abstract and paper submission

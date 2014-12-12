@@ -12,7 +12,7 @@ BG - #edeef0 - Light blue
 	padding: 34px 0 35px;
 }
 header.page-title {
-	background: #2e2e2d;
+	background: #4e5066;
 	color: #fff;
 	margin-bottom: 10px;
 }
@@ -53,14 +53,20 @@ div#footer-wrapper div.block-content {
 	background: none;
 }
 div#footer-wrapper {
-  background-color: #2e2e2d;
-  color: #fff;
+	background-color: #2e2e2d;
+	color: #fff;
 }
 /*============================================== Blocks =============================================*/
 div.block-content div.create-account-anonymous, div.block-content div#schedule-may-change {
 	text-align: center;
+}
+div.block-content div.create-account-anonymous {
 	padding: 1em;
-	background: #ccc/*#eee*/;
+	background: #ccc;
+}
+div.region-highlighted div.block-content p {
+	padding: 0;
+	margin: 0;
 }
 div.block-content div.create-account-anonymous a.button {
 	padding: 8px 8px;
@@ -70,12 +76,11 @@ div.block-content div.create-account-anonymous a.button {
 div.block-content div.create-account-anonymous a.button:hover {
 	background: #e25400;
 }
-
 /*============================================== Blocks - End =============================================*/
 
 /*============================================== Messages =============================================*/
 div.messages.status li:last-child {
-  display: none;
+	display: none;
 }
 /*============================================== Messages - End =============================================*/
 
@@ -266,9 +271,9 @@ div.form-actions input[type=submit] {
 	padding: 20px 2em;
 }
 input.form-submit#edit-field-file-und-0-remove-button {
-  background: none;
-  border: none;
-  color: #086782;
+	background: none;
+	border: none;
+	color: #086782;
 }
 input.form-submit#edit-field-file-und-0-remove-button:hover {
 	color: #e25400;
