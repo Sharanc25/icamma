@@ -60,6 +60,18 @@ div#footer-wrapper div.block-content {
 	color: #fff;
 	margin-bottom: 0;
 }
+#footer-wrapper  ul.menu {
+  text-align: center;
+}
+#footer-wrapper  ul.menu li {
+   display: inline;
+   padding: 0 15px;
+   border-right:1px #fff solid;
+  
+}
+#footer-wrapper  ul.menu li.last {
+   border: none;  
+}
 /*============================================== Home Page =============================================*/
 div#about-amma-2015 div#preamble {
   text-indent: 50px;
@@ -94,11 +106,7 @@ div.block-content div.create-account-anonymous, div.block-content div#schedule-m
 }
 div.block-content div.create-account-anonymous {
 	padding: 1em;
-	background: #ccc;
-}
-div.region-highlighted div.block-content p {
-	padding: 0;
-	margin: 0;
+	background: #EBEBEB;
 }
 div.block-content div.create-account-anonymous a.button {
 	padding: 8px 8px;
@@ -112,6 +120,10 @@ div#footer-wrapper .block{
 	padding: 15px 0 0 0;
 	margin: 0;
 }
+div.region-highlighted div.block-content p {
+	padding: 0;
+	margin: 0;
+}
 /*============================================== Blocks - End =============================================*/
 
 /*============================================== Messages =============================================*/
@@ -120,29 +132,7 @@ div.messages.status li:last-child {
 }
 /*============================================== Messages - End =============================================*/
 
-/*==============================================Tables=============================================*/
-article#node-4 table {
-	border: none;
-}
-article#node-4 table tbody {
-	border: none;
-}
-article#node-4 table tr td {
-	width: 50%;
-	border: none;
-	text-align: left;
-}
-article#node-4 table tr td:first-child {
-	border-right: 1px solid #eee;
-}
-article#node-5 table { /**/
-	margin: auto;
-	width: 500px;
-}
-table.views-table tr td a {
-	display: block;
-}
-/*==============================================Tabels END=============================================*/
+
 
 /*==============================================Horizontal Tabs=============================================*/
 div.horizontal-tabs {
@@ -202,7 +192,7 @@ div.grippie {
 /*==============================================Forms - End=============================================*/
 
 
-/*==============================================Registration Page=============================================*/
+/*==============================================Account Registration Page=============================================*/
 div#login-links a {
 	color: #000;
 }
@@ -219,7 +209,16 @@ div#login-links a {
 	border: none;
 	color: #fff;
 }
-/*==============================================Registration Page - End=============================================*/
+/*==============================================Account Registration Page - End=============================================*/
+
+
+/*==============================================AmmA - 2015 Registration Page=============================================*/
+
+
+
+
+/*==============================================AmmA - 2015 Registration Page - End======================================*/
+
 
 
 /*==============================================Radio Buttons=============================================*/

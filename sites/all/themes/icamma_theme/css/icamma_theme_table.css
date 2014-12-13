@@ -1,113 +1,79 @@
-/*  
-Sticky Footer Solution
-*/
-/*html, body {
-  height: 100%;
+/*  Styles for Tables - http://codepen.io/alassetter/pen/cyrfB */
+/*table#address-for-correspondence tr th{ 
+  width: 10em;
+}*/
+/*==============================================Tables=============================================*/
+article#node-5 table {
+	margin: auto;
+	width: 500px;
 }
-#page-wrapper {
-  min-height: 100%;
+table.views-table tr td a {
+	display: block;
 }
-#page {
-  overflow:auto;
-  padding-bottom: 50px; must be same height as the footer 
-}  */
-div.table-title {
-   display: block;
-  margin: auto;
-  max-width: 600px;
-  width: 100%;
+/*==============================================Tabels END=============================================*/
+table#address-for-correspondence, table.organisers {
+	width: auto;
+	margin: 0 auto 25px auto;
 }
-
-.table-title h3 {
-   color: #fafafa;
-   text-transform:uppercase;
+table.organisers tr td, table.organising-comitee tr td {
+	width: 50%;
+	text-align: left;
 }
-
-/*** Table Styles **/
-
-.table-fill {
-  background: white;
-  border-radius:3px;
-  border-collapse: collapse;
-  height: 320px;
-  margin: auto;
-  max-width: 600px;
-  width: 100%;
-  animation: float 5s infinite;
+table#address-for-correspondence tr td, table#address-for-correspondence tr th, table.organisers tr td, table.organisers tr th, table.organising-comitee tr th, table.register-for-amma tr th  {
+	text-align: center;
 }
- 
-th {
-  color:#D5DDE5;;
-  background:#1b1e24;
-  border-bottom:4px solid #9ea7af;
-  border-right: 1px solid #343a45;
-  text-align:left;
-  vertical-align:middle;
+th, thead th {
+	color: #D5DDE5;
+	background: #1b1e24;
+	border-bottom: 4px solid #9ea7af;
+	border-right: 1px solid #343a45;
+	text-align: left;
+	vertical-align: middle;
 }
-
+th.last {
+	border-bottom: none;
+}
 th:last-child {
-  border-right:none;
+	border-right: none;
 }
-  
 tr {
-  border-top: 1px solid #C1C3D1;
-  border-bottom-: 1px solid #C1C3D1;
-  color:#666B85;
-  font-weight:normal;
+	/*border-top: 1px solid #C1C3D1;
+	border-bottom: 1px solid #C1C3D1;*/
+	color: #666B85;
+	font-weight: normal;
 }
- 
+tr td a {
+	color: #666B85;
+}
 tr:hover td {
-  background:#4E5066;
-  color:#FFFFFF;
+	background: #4E5066;
+	color: #FFFFFF;
 }
- 
+tr:hover td a {
+	color: #FFFFFF;
+}
+tr td a:hover {
+	color: #e25400;
+}
 tr:first-child {
-  border-top:none;
+	border-top: none;
 }
-
 tr:last-child {
-  border-bottom:none;
+	border-bottom: none;
 }
- 
 tr:nth-child(odd) td {
-  background:#EBEBEB;
+	background: #EBEBEB;
 }
- 
 tr:nth-child(odd):hover td {
-  background:#4E5066;
+	background: #4E5066;
 }
 td {
-  background:#FFFFFF;
-  padding:20px;
-  text-align:left;
-  vertical-align:middle;
-  border-right: 1px solid #C1C3D1;
+	background: #FFFFFF;
+	padding: 20px;
+	text-align: left;
+	vertical-align: middle;
+	border-right: 1px solid #C1C3D1;
 }
-
 td:last-child {
-  border-right: 0px;
-}
-
-th.text-left {
-  text-align: left;
-}
-
-th.text-center {
-  text-align: center;
-}
-
-th.text-right {
-  text-align: right;
-}
-
-td.text-left {
-  text-align: left;
-}
-
-td.text-center {
-  text-align: center;
-}
-
-td.text-right {
-  text-align: right;
+	border-right: 0px;
 }
