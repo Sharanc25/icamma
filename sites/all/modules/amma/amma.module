@@ -5,6 +5,7 @@
  * Used to make 'Selection Criteria' option accessible only by reviewers and admins
  */
 function amma_form_abstract_node_form_alter(&$form, &$form_state) {
+	 $form['field_field'][LANGUAGE_NONE]['#options']['_none'] = t("-- Select Area --");
      $form['field_selection_criteria']['#access'] = user_access('reviewer'); // Prevents access to Admin Fields
 	 $form['field_presentation_slot']['#access'] = user_access('reviewer');
      $form['#after_build'][] = 'amma_abstract_node_form_after_build'; //remove Input HTML select option
