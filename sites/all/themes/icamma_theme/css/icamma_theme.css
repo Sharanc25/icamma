@@ -3,8 +3,8 @@
 Colors :
 BG - #edeef0 - Light blue
 #e0e0e0 - Windows Live Grey
-#086782 - Poster Blue
-
+#4e5066 - Matte Blue
+#e25400 - Orange
 }*/
 
 /* Header Title*/
@@ -56,6 +56,34 @@ div#footer-wrapper {
 	background-color: #2e2e2d;
 	color: #fff;
 }
+/*============================================== Home Page =============================================*/
+div#about-amma-2015 div#preamble {
+  text-indent: 50px;
+  text-align:justify;
+  margin: 10px;
+}
+div#about-amma-2015 h3 {
+  width: auto;
+  background-color: #4e5066; 
+  padding: 5px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+div#about-amma-2015 span.minor-heading {
+    color: #e25400;
+	font-weight: bold;
+}
+div#about-amma-2015 a.submit-abstract-link {
+   background-color:  #2e2e2d;
+   color: #fff;
+   padding: 1em 2em;
+}
+div#about-amma-2015 a.submit-abstract-link:hover {
+   background-color:  #e25400;
+}
+/*============================================== Home Page - End =============================================*/
+
+
 /*============================================== Blocks =============================================*/
 div.block-content div.create-account-anonymous, div.block-content div#schedule-may-change {
 	text-align: center;
@@ -312,7 +340,7 @@ input.form-submit#edit-field-file-und-0-remove-button:hover {
 	scrollbar-arrow-color: #C1C1D1;
 }
 /*============================================== Effects =============================================*/
-#toboggan-login input.form-submit, div.block-content div.create-account-anonymous a.button, .nav .block-menu ul li a {
+#toboggan-login input.form-submit, div.block-content div.create-account-anonymous a.button, .nav .block-menu ul li a, div#about-amma-2015 a.submit-abstract-link {
 	-webkit-transition: background 0.3s ease-in-out;
 	-moz-transition: background 0.3s ease-in-out;
 	-ms-transition: background 0.3s ease-in-out;
