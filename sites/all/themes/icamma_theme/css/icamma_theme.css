@@ -55,25 +55,26 @@ div#footer-wrapper div.block-content {
 .nav .block-menu ul a:visited {
 	background: none;
 }
-div#footer-wrapper {
+#footer-wrapper, #footer-panels-wrapper{
 	background-color: #2e2e2d;
 	color: #fff;
+	margin-bottom: 0;
 }
 /*============================================== Home Page =============================================*/
 div#about-amma-2015 div#preamble {
   text-indent: 50px;
   text-align:justify;
-  margin: 10px;
 }
 div#about-amma-2015 h3 {
-  width: auto;
+  margin: 10px 0;
+  text-align: center;
   background-color: #4e5066; 
-  padding: 5px;
+  padding: 5px 0;
   color: #fff;
-  margin-bottom: 10px;
+  
 }
 div#about-amma-2015 span.minor-heading {
-    color: #e25400;
+    /*color: #e25400;*/
 	font-weight: bold;
 }
 div#about-amma-2015 a.submit-abstract-link {
