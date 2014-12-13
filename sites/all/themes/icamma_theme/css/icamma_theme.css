@@ -20,6 +20,9 @@ h1#page-title, .in-maintenance h1#page-title {
 	padding: 14px;
 	margin: 0;
 }
+h2#site-slogan {
+  font-size: 23px;
+}
 .content-style {
 	border: none;
 	background: none;
