@@ -82,8 +82,8 @@ function amma_form_contact_personal_form_alter(&$form, &$form_state) {
  */
 function amma_node_view($node, $view_mode, $langcode) {
 //TODO: Check if hook_node_view_alter() is a better option than this function.
- $selection_criteria = field_get_items('node',$node,'field_selection_criteria')[0]['value'];
-   if($selection_criteria === 'pending' || $selection_criteria === 'rejected') {
+ $selection_criteria = field_get_items('node',$node,'field_selection_criteria');
+   if($selection_criteria[0]['value'] == 'pending' || $selection_criteria[0]['value'] == 'rejected') {
 	    $node->content['field_presentation_slot']['#access'] = FALSE;
    }
  
