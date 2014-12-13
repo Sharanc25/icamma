@@ -125,7 +125,6 @@
     <div id="footer-wrapper">
       <div class="container clearfix">
         <footer class="clearfix" role="contentinfo"> <?php print render($page['footer']); ?>
-          <p class="attribute-creator"><?php print $attribution; ?></p>
         </footer>
       </div>
     </div>
