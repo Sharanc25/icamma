@@ -19,8 +19,6 @@ function icamma_theme_lt_login_link($variables) {
 		return t('Log in');
 	}
 } 
-
-
 // Convert username to link in logged in users.
 /*function icamma_theme_lt_loggedinblock(){
   global $user;

@@ -15,6 +15,7 @@
 	padding: 15px;
 	overflow: hidden;
 	z-index: 999;
+	color: #fff;
 }
 #toboggan-login input.form-submit {
 	border: none;

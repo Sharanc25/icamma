@@ -53,10 +53,13 @@ function amma_form_paper_node_form_alter(&$form, &$form_state) {
     //unset($form['field_selection_criteria']['und']['#options']['_none']);
 }
 
+// Custom Message after submitting Abstract
 function amma_abstract_message($form, &$form_state){
   $messages = drupal_get_messages('status');
   drupal_set_message(t("Your Abstract has been submitted successfully. Keep checking this website for more updates."));
 }
+
+// Custom Message after uploading paper
 function amma_paper_message($form, &$form_state){
   $messages = drupal_get_messages('status');
   drupal_set_message(t("Your Paper has been submitted successfully. Keep checking this website for more updates."));
@@ -86,7 +89,6 @@ function amma_node_view($node, $view_mode, $langcode) {
    if($selection_criteria[0]['value'] == 'pending' || $selection_criteria[0]['value'] == 'rejected') {
 	    $node->content['field_presentation_slot']['#access'] = FALSE;
    }
- 
 }
 
 /**

@@ -101,6 +101,11 @@ div#about-amma-2015 a.submit-abstract-link:hover {
 
 
 /*============================================== Blocks =============================================*/
+div.region-highlighted div.block-content {
+  background-color:#ebebeb;
+  padding: 1em;
+}
+
 div.block-content div.create-account-anonymous, div.block-content div#schedule-may-change {
 	text-align: center;
 }

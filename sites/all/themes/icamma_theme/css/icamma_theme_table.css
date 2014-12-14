@@ -10,8 +10,7 @@ article#node-5 table {
 table.views-table tr td a {
 	display: block;
 }
-/*==============================================Tabels END=============================================*/
-table#address-for-correspondence, table.organisers {
+table#address-for-correspondence, table.organisers, table.payment-mode {
 	width: auto;
 	margin: 0 auto 25px auto;
 }
@@ -19,7 +18,7 @@ table.organisers tr td, table.organising-comitee tr td {
 	width: 50%;
 	text-align: left;
 }
-table#address-for-correspondence tr td, table#address-for-correspondence tr th, table.organisers tr td, table.organisers tr th, table.organising-comitee tr th, table.register-for-amma tr th  {
+table#address-for-correspondence tr td, table#address-for-correspondence tr th, table.organisers tr td, table.organisers tr th, table.organising-comitee tr th, table.register-for-amma tr th, table.payment-mode th  {
 	text-align: center;
 }
 th, thead th {
