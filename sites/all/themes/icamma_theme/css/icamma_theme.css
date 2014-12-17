@@ -20,8 +20,30 @@ h1#page-title, .in-maintenance h1#page-title {
 	padding: 14px;
 	margin: 0;
 }
+/* Slogan */
 h2#site-slogan {
-  font-size: 23px;
+	font-size: 23px;
+}
+#site-slogan::selection {
+	color: #fff;
+}
+#site-slogan::-moz-selection {
+ color: #fff;
+}
+span#conference-dates::selection {
+	color: #fff;
+}
+span#conference-dates::moz-selection {
+ color: #fff;
+}
+#site-slogan span#conference-dates {
+	display: block;
+}
+#site-name a::selection {
+	color: #fff;
+}
+#site-name a::-moz-selection {
+ color: #fff;
 }
 .content-style {
 	border: none;
@@ -55,62 +77,62 @@ div#footer-wrapper div.block-content {
 .nav .block-menu ul a:visited {
 	background: none;
 }
-#footer-wrapper, #footer-panels-wrapper{
+#footer-wrapper, #footer-panels-wrapper {
 	background-color: #2e2e2d;
 	color: #fff;
 	margin-bottom: 0;
 }
-#footer-wrapper  ul.menu {
-  text-align: center;
+#footer-wrapper ul.menu {
+	text-align: center;
 }
-#footer-wrapper  ul.menu li {
-   display: inline;
-   padding: 0 15px;
-   border-right:1px #fff solid;
-  
+#footer-wrapper ul.menu li {
+	display: inline;
+	padding: 0 15px;
+	border-right: 1px #fff solid;
 }
-#footer-wrapper  ul.menu li.last {
-   border: none;  
+#footer-wrapper ul.menu li.last {
+	border: none;
 }
 /*============================================== Home Page =============================================*/
+div.flex-caption {
+	text-align: center;
+	font-weight: bold;
+}
 div#about-amma-2015 div#preamble {
-  text-indent: 50px;
-  text-align:justify;
+	text-indent: 50px;
+	text-align: justify;
 }
 div#about-amma-2015 h3 {
-  margin: 10px 0;
-  text-align: center;
-  background-color: #4e5066; 
-  padding: 5px 0;
-  color: #fff;
-  
+	margin: 10px 0;
+	text-align: center;
+	background-color: #4e5066;
+	padding: 5px 0;
+	color: #fff;
 }
 div#about-amma-2015 span.minor-heading {
-    /*color: #e25400;*/
+	/*color: #e25400;*/
 	font-weight: bold;
 }
 div#about-amma-2015 a.submit-abstract-link {
-   background-color:  #2e2e2d;
-   color: #fff;
-   padding: 1em 2em;
+	background-color: #2e2e2d;
+	color: #fff;
+	padding: 1em 2em;
 }
 div#about-amma-2015 a.submit-abstract-link:hover {
-   background-color:  #e25400;
+	background-color: #e25400;
 }
 /*============================================== Home Page - End =============================================*/
 
 
 /*============================================== Blocks =============================================*/
 div.region-highlighted div.block-content {
-  background-color:#ebebeb;
-  padding: 1em;
+	background-color: #ebebeb;
+	padding: 1em;
 }
-
 div.block-content div.create-account-anonymous, div.block-content div#schedule-may-change {
 	text-align: center;
 }
 div.block-content div.create-account-anonymous {
-	padding: 1em;
 	background: #EBEBEB;
 }
 div.block-content div.create-account-anonymous a.button {
@@ -121,7 +143,7 @@ div.block-content div.create-account-anonymous a.button {
 div.block-content div.create-account-anonymous a.button:hover {
 	background: #e25400;
 }
-div#footer-wrapper .block{
+div#footer-wrapper .block {
 	padding: 15px 0 0 0;
 	margin: 0;
 }
@@ -194,6 +216,9 @@ form#registration-form div.registration-who-msg {
 div.grippie {
 	display: none;
 }
+.form-item label {
+	font-weight: bold;
+}
 /*==============================================Forms - End=============================================*/
 
 
@@ -238,6 +263,7 @@ div.form-type-radio label {
 	border: 1px solid #D1D3D4;
 	padding: 0 4px 0 0;
 	margin: 5px;
+	font-weight: normal;
 }
 /* hide input */
 div.form-type-radio input.form-radio:empty {
@@ -317,6 +343,13 @@ input.form-submit#edit-field-file-und-0-remove-button {
 }
 input.form-submit#edit-field-file-und-0-remove-button:hover {
 	color: #e25400;
+}
+.form-type-managed-file a.button.browse {
+	background: url(images/button.png) repeat-x left top transparent;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	margin: 0 5px 0 0;
+	padding: 5px 11px;
 }
 /*==============================================Submit Buttons - End=============================================*/
 .chosen-container-single .chosen-single {

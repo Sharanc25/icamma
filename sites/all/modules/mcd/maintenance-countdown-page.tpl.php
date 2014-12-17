@@ -1,4 +1,5 @@
 <?php
+$title = "Site Under Construction"; // Custom Text for maintenance page
 /**
  * @file
  *

@@ -21,7 +21,10 @@
               <h1<?php print $site_name_attributes; ?>><?php print $site_name; ?></h1>
               <?php endif; ?>
               <?php if ($site_slogan): ?>
-              <h2<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
+              <h2<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?>
+              <span id="conference-dates">April 9-11, 2015</span>
+              </h2>
+              
               <?php endif; ?>
             </div>
             <?php endif; ?>

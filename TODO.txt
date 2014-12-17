@@ -9,6 +9,7 @@
 10. Remove title field from content types - Wont Solve
 11. Remove Error Reporting from Index.php - in production site
 12. Add blocks to user profile page
+13. Block Presentation Slot from registration view
 
 12. Generate unique id for Submit Abstract - Pending
 13. Change "Save" to "Submit" incase of abstract and paper submission
