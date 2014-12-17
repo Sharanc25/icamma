@@ -9,17 +9,17 @@
 10. Remove title field from content types - Wont Solve
 11. Remove Error Reporting from Index.php - in production site
 12. Add blocks to user profile page
-13. Block Presentation Slot from registration view
+13. Create Presentation Slot as a Block using view
 
 12. Generate unique id for Submit Abstract - Pending
-13. Change "Save" to "Submit" incase of abstract and paper submission
-14. Install Chosen plugin
-15. Users Cannot Modify account information after creating account
+13. Change "Save" to "Submit" in case of abstract and paper submission
+14. Install Chosen plug-in - solved
+15. Users Cannot Modify account information after creating account - solved
 16. Remove contact form from user profile page - Solve (Removed editing capabilities for users)
-17. Module for thesis
+
 18. Update ROBOTS.txt
 18. Update .htaccess
-19. Set Private Folder
-20. Modify Abstract and Paper Submission Message
+19. Set Private Folder - solved
+20. Modify Abstract and Paper Submission Message - Solved
 21. Hide error messages in production site - admin/config/development/logging
 

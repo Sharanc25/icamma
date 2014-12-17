@@ -2,6 +2,18 @@
 /*table#address-for-correspondence tr th{ 
   width: 10em;
 }*/
+/*==============================================View Tables=============================================*/
+.view-user-abstract table tr:nth-child(odd) td, .view-user-abstract table tr td{
+  background: none;
+  color: #000;
+}
+.view-user-abstract table tr:nth-child(odd):hover td, .view-user-abstract table tr:hover td {
+  background: none;
+  color: #000;
+}
+.view-user-abstract table tr:nth-child(odd):hover td a, .view-user-abstract table tr:hover td a {
+	color: inherit;
+}
 /*==============================================Tables=============================================*/
 article#node-5 table {
 	margin: auto;

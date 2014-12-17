@@ -29,3 +29,9 @@
 div#block-logintoboggan-logintoboggan-logged-in {
 	color: #fff;
 }
+div.toboggan-login-link-container a, div.user-login-block a {
+	color: #ccc;
+}
+div.toboggan-login-link-container a:hover, div.user-login-block a:hover {
+	color: #e25400;
+}
