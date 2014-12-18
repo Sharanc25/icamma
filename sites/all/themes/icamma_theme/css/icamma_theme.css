@@ -8,7 +8,7 @@ BG - #edeef0 - Light blue
 }*/
 /*============================================== Header =============================================*/
 #header-wrapper {
-    background: url("images/patterns/honeycomb.png") repeat;
+    background: url("images/patterns/congruent.png") repeat;
 }
 #branding {
   padding: 25px 0;
@@ -39,6 +39,7 @@ header span.site-slogan-small {
 }
 #site-name a {
   letter-spacing: 0;
+  font-weight: bold;
 }
 /* Slogan */
 .ssw-n #site-slogan, h2#site-slogan {
@@ -148,12 +149,12 @@ div#about-amma-2015 span.minor-heading {
 	/*color: #e25400;*/
 	font-weight: bold;
 }
-div#about-amma-2015 a.submit-abstract-link {
+a.submit-abstract-link {
 	background-color: #2e2e2d;
 	color: #fff;
 	padding: 1em 2em;
 }
-div#about-amma-2015 a.submit-abstract-link:hover {
+a.submit-abstract-link:hover {
 	background-color: #e25400;
 }
 /*============================================== Home Page - End =============================================*/
