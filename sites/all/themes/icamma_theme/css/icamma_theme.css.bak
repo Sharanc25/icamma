@@ -1,0 +1,391 @@
+/* ICAMMA - 2015 Styles*/
+/*
+Colors :
+BG - #edeef0 - Light blue
+#e0e0e0 - Windows Live Grey
+#4e5066 - Matte Blue
+#e25400 - Orange
+}*/
+/*============================================== Header =============================================*/
+#branding {
+    padding: 34px 0 35px;
+}
+header.page-title {
+    background: #4e5066;
+    color: #fff;
+    margin-bottom: 10px;
+}
+h1#page-title, .in-maintenance h1#page-title {
+    padding: 14px;
+    margin: 0;
+}
+/* Slogan */
+h2#site-slogan {
+    font-size: 23px;
+}
+#site-slogan::selection {
+    color: #fff;
+}
+#site-slogan::-moz-selection {
+    color: #fff;
+}
+span#conference-dates::selection {
+    color: #fff;
+}
+span#conference-dates::moz-selection {
+    color: #fff;
+}
+#site-slogan span#conference-dates {
+    display: block;
+}
+#site-name a::selection {
+    color: #fff;
+}
+#site-name a::-moz-selection {
+    color: #fff;
+}
+/*============================================== Header - End =============================================*/
+
+.content-style {
+	border: none;
+	background: none;
+}
+#block-system-help {
+	background: none;
+	border: none;
+	margin-top: 25px;
+}
+#block-search-form {
+	float: right !important;
+}
+#search-block-form {
+	margin: 0.4em 0 0 0;
+}
+#block-search-form input.form-text {
+	width: 225px;
+	margin-bottom: 0;
+}
+section#main-content {
+	width: 100%;
+}
+div#footer-wrapper div.block-content {
+	text-align: center;
+}
+/* Menu Highlight Fix for IE*/
+.nav .block-menu ul li:focus, .nav .block-menu ul li:hover, .nav .block-menu ul li:active {
+	background: #e25402;
+}
+.nav .block-menu ul a:visited {
+	background: none;
+}
+#footer-wrapper, #footer-panels-wrapper {
+	background-color: #2e2e2d;
+	color: #fff;
+	margin-bottom: 0;
+}
+#footer-wrapper ul.menu {
+	text-align: center;
+}
+#footer-wrapper ul.menu li {
+	display: inline;
+	padding: 0 15px;
+	border-right: 1px #fff solid;
+}
+#footer-wrapper ul.menu li.last {
+	border: none;
+}
+/*============================================== Home Page =============================================*/
+div.flex-caption {
+	text-align: center;
+	font-weight: bold;
+}
+div#about-amma-2015 div#preamble {
+	text-indent: 50px;
+	text-align: justify;
+}
+div#about-amma-2015 h3 {
+	margin: 10px 0;
+	text-align: center;
+	background-color: #4e5066;
+	padding: 5px 0;
+	color: #fff;
+}
+div#about-amma-2015 span.minor-heading {
+	/*color: #e25400;*/
+	font-weight: bold;
+}
+div#about-amma-2015 a.submit-abstract-link {
+	background-color: #2e2e2d;
+	color: #fff;
+	padding: 1em 2em;
+}
+div#about-amma-2015 a.submit-abstract-link:hover {
+	background-color: #e25400;
+}
+/*============================================== Home Page - End =============================================*/
+
+
+/*============================================== Blocks =============================================*/
+div.region-highlighted div.block-content {
+	background-color: #ebebeb;
+	padding: 1em;
+}
+div.block-content div.create-account-anonymous, div.block-content div#schedule-may-change {
+	text-align: center;
+}
+div.block-content div.create-account-anonymous {
+	background: #EBEBEB;
+}
+div.block-content div.create-account-anonymous a.button {
+	padding: 8px 8px;
+	background: #086782;
+	color: #fff;
+}
+div.block-content div.create-account-anonymous a.button:hover {
+	background: #e25400;
+}
+div#footer-wrapper .block {
+	padding: 15px 0 0 0;
+	margin: 0;
+}
+div.region-highlighted div.block-content p {
+	padding: 0;
+	margin: 0;
+}
+/*============================================== Blocks - End =============================================*/
+
+/*============================================== Messages =============================================*/
+div.messages.status li:last-child {
+	display: none;
+}
+/*============================================== Messages - End =============================================*/
+
+
+
+/*==============================================Horizontal Tabs=============================================*/
+div.horizontal-tabs {
+	border-top: none;
+}
+.horizontal-tabs ul.horizontal-tabs-list li:hover, .horizontal-tabs ul.horizontal-tabs-list li:focus {
+	background-color: #fff;
+	box-shadow: 5px inset #fff;
+}
+.horizontal-tabs ul.horizontal-tabs-list li a:hover, .horizontal-tabs ul.horizontal-tabs-list li:hover {
+	background-color: #fff;
+}
+.horizontal-tabs ul.horizontal-tabs-list {
+	border-bottom: 1px solid #ccc;
+	border-right: none;
+	border-collapse: collapse;
+	list-style: outside none none;
+	background: #fff;
+	white-space: nowrap;
+	width: 100.1%;
+}
+.horizontal-tabs ul.horizontal-tabs-list li {
+	border-top: 1px solid #ccc;
+	margin-right: 10px;
+	display: inline;
+	z-index: 999;
+}
+.horizontal-tabs ul.horizontal-tabs-list li.last {
+	border-left: 1px solid #ccc;
+}
+/*div.horizontal-tabs-panes{
+  border-top:1px solid #ccc;
+  border-right:1px solid #ccc;
+  margin-top:-8px;
+}*/
+/*==============================================Horizontal Tabs - End=============================================*/
+
+/*==============================================Forms=============================================*/
+/*Registration Form*/
+form#registration-form .form-checkboxes .form-item, .form-radios .form-item {
+	display: inline;
+}
+form#registration-form select#edit-field-name-und-0-title {
+	padding: 4px;
+	height: 34px;
+}
+input.form-text, input.form-password, input.form-file, textarea {
+	border-radius: 0;
+}
+form#registration-form div.registration-who-msg {
+	display: none;
+}
+/*Abstract Form*/
+div.grippie {
+	display: none;
+}
+.form-item label {
+	font-weight: bold;
+}
+/*==============================================Forms - End=============================================*/
+
+
+/*==============================================Account Registration Page=============================================*/
+div#login-links a {
+	color: #000;
+}
+.toboggan-unified #login-links a {
+	border: none;
+	background: none;
+}
+.toboggan-unified #login-links a:hover {
+	background-color: #e25400;
+	color: #fff;
+}
+.toboggan-unified #login-links a.lt-active, .toboggan-unified #login-links a.lt-active:hover {
+	background-color: #086782;
+	border: none;
+	color: #fff;
+}
+/*==============================================Account Registration Page - End=============================================*/
+
+
+/*==============================================AmmA - 2015 Registration Page=============================================*/
+
+
+
+
+/*==============================================AmmA - 2015 Registration Page - End======================================*/
+
+
+
+/*==============================================Radio Buttons=============================================*/
+label span.form-required {
+	display: none;
+}
+div.form-wrapper, div.form-actions {
+	clear: both;
+}
+div.form-type-radio label {
+	width: auto;
+	border: 1px solid #D1D3D4;
+	padding: 0 4px 0 0;
+	margin: 5px;
+	font-weight: normal;
+}
+/* hide input */
+div.form-type-radio input.form-radio:empty {
+	margin-left: -99999px;
+}
+/* style label */
+div.form-type-radio input.form-radio:empty ~ label {
+	position: relative;
+	float: left;
+	text-indent: 2.4em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+div.form-type-radio input.form-radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2em;
+	background: /*#D1D3D4*/#fff;
+	border-right: 1px solid #D1D3D4;
+}
+/* toggle hover */
+div.form-type-radio input.form-radio:hover:not(:checked) ~ label:before {
+	content: '\2714';
+	text-indent: .5em;
+	color: #C2C2C2;
+}
+div.form-type-radio input.form-radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+/* toggle on */
+div.form-type-radio input.form-radio:checked ~ label:before {
+	content: '\2714';
+	text-indent: .5em;
+	color: #9CE2AE;
+	background-color: #4DCB6D;
+}
+div.form-type-radio input.form-radio:checked ~ label {
+	color: #777;
+}
+/* radio focus */
+/*div.form-type-radio input.form-radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}*/
+/*==============================================Radio Buttons - End=============================================*/
+
+/*==============================================Submit Buttons=============================================*/
+input.form-button, input.form-submit {
+	background: #2e2e2d;
+	outline: none;
+	border: 1px solid #d8d8d8;
+}
+input.form-button:hover, input.form-submit:hover {
+	background-color: #e25400;
+}
+input.form-button:active, input.form-submit:active {
+	background-color: #d9d9d9;
+}
+div.form-actions input[type=submit] {
+	font-weight: bold;
+	color: #fff;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+	padding: 20px 2em;
+}
+input.form-submit#edit-field-file-und-0-remove-button {
+	background: none;
+	border: none;
+	color: #086782;
+}
+input.form-submit#edit-field-file-und-0-remove-button:hover {
+	color: #e25400;
+}
+.form-type-managed-file a.button.browse {
+	background: url(images/button.png) repeat-x left top transparent;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	margin: 0 5px 0 0;
+	padding: 5px 11px;
+}
+/*==============================================Submit Buttons - End=============================================*/
+.chosen-container-single .chosen-single {
+	height: 34px;
+	line-height: 34px;
+	font-size: 16px;
+	border-radius: 0;
+	background: #fff;
+}
+.chosen-container-active.chosen-with-drop .chosen-single {
+	background: #fff;
+}
+.chosen-container-single .chosen-single div b {
+	background-position: 0 8px;
+}
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+	background-position: -18px 8px;
+}
+.chosen-container .chosen-results li.highlighted {
+	background: #e25400;
+}
+.chosen-drop {
+	scrollbar-face-color: #000000;
+	scrollbar-shadow-color: #2D2C4D;
+	scrollbar-highlight-color: #7D7E94;
+	scrollbar-3dlight-color: #7D7E94;
+	scrollbar-darkshadow-color: #2D2C4D;
+	scrollbar-track-color: #7D7E94;
+	scrollbar-arrow-color: #C1C1D1;
+}
+/*============================================== Effects =============================================*/
+#toboggan-login input.form-submit, div.block-content div.create-account-anonymous a.button, .nav .block-menu ul li a, div#about-amma-2015 a.submit-abstract-link {
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	-ms-transition: background 0.3s ease-in-out;
+	-o-transition: background 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+}

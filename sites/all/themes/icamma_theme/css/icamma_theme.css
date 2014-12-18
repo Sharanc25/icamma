@@ -6,44 +6,64 @@ BG - #edeef0 - Light blue
 #4e5066 - Matte Blue
 #e25400 - Orange
 }*/
-
-/* Header Title*/
+/*============================================== Header =============================================*/
 #branding {
-	padding: 34px 0 35px;
+  padding: 25px 0;
 }
-header.page-title {
-	background: #4e5066;
-	color: #fff;
-	margin-bottom: 10px;
+header h1 span.new-line {
+  display: block;
 }
-h1#page-title, .in-maintenance h1#page-title {
-	padding: 14px;
-	margin: 0;
+header h1 span.first-letter {
+  color: #e25400;
+  font-weight:bold;
+}
+#logo  {
+   opacity: 0;
+}
+#site-name a {
+  letter-spacing: 0;
 }
 /* Slogan */
-h2#site-slogan {
-	font-size: 23px;
+.ssw-n #site-slogan, h2#site-slogan {
+  font-weight: bold;
+}
+#branding .h-group {
+  display:block;
 }
 #site-slogan::selection {
-	color: #fff;
+    color: #fff;
 }
 #site-slogan::-moz-selection {
- color: #fff;
+    color: #fff;
 }
 span#conference-dates::selection {
-	color: #fff;
+    color: #fff;
 }
 span#conference-dates::moz-selection {
- color: #fff;
+    color: #fff;
 }
 #site-slogan span#conference-dates {
-	display: block;
+    display: block;
 }
 #site-name a::selection {
-	color: #fff;
+    color: #fff;
 }
 #site-name a::-moz-selection {
- color: #fff;
+    color: #fff;
+}
+/*============================================== Header - End =============================================*/
+header.page-title {
+    background: #4e5066;
+    color: #fff;
+    margin-bottom: 10px;
+}
+h1#page-title, .in-maintenance h1#page-title {
+    padding: 14px;
+    margin: 0;
+}
+h1#page-title span.font-orbitron {
+    font-family: 'Orbitron';
+    font-size: 0.9em;
 }
 .content-style {
 	border: none;

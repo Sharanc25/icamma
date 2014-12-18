@@ -83,7 +83,7 @@ function amma_form_contact_personal_form_alter(&$form, &$form_state) {
  * Used to alter the selection creiteria html
  */
 function amma_node_view($node, $view_mode, $langcode) {
- dpm($node->content['field_selection_criteria']);	
+ //dpm($node->content['field_selection_criteria']);
 //TODO: Check if hook_node_view_alter() is a better option than this function.
  $selection_criteria = field_get_items('node',$node,'field_selection_criteria');
    if($selection_criteria[0]['value'] == 'pending' || $selection_criteria[0]['value'] == 'rejected') {

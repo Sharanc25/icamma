@@ -1,4 +1,4 @@
-<?php // Corolla ?>
+<?php global $base_url; ?>
 
 <div id="page-wrapper">
   <div id="page" class="<?php print $classes; ?>">
@@ -19,19 +19,19 @@
             <div<?php print $hgroup_attributes; ?>>
               <?php if ($site_name): ?>
               <h1<?php print $site_name_attributes; ?>>
-                <span id="first-line">International Conference</span>
-                <span id="second-line">on</span>
-                <span id="third-line">
-                <span class="first-letter">A</span>dvances in
-                <span class="first-letter">M</span>aterials,
-                <span class="first-letter">M</span>anufacturing and
-                <span class="first-letter">A</span>pplications</span>
+                <a href="<?php print $base_url ?>" title="Home page" class="active">
+                  <span class="new-line">International Conference</span>
+                  <span class="new-line">on</span>
+                  <span class="new-line">
+                  <span class="first-letter">A</span>dvances in
+                  <span class="first-letter">M</span>aterials,
+                  <span class="first-letter">M</span>anufacturing and
+                  <span class="first-letter">A</span>pplications</span>
+                </a>
               </h1>
               <?php endif; ?>
               <?php if ($site_slogan): ?>
-              <h2<?php print $site_slogan_attributes; ?>>AmmA - 2015
-              <span id="conference-dates">April 9-11, 2015</span>
-              </h2>
+              <h2<?php print $site_slogan_attributes; ?>>April 9-11, 2015</h2>
               <?php endif; ?>
             </div>
             <?php endif; ?>
@@ -63,7 +63,7 @@
     <?php print render($title_prefix); ?>
     <?php if ($title): ?>
     <header class="clearfix page-title">
-      <h1 id="page-title"> <?php print $title; ?> </h1>
+      <h1 id="page-title">Welcome to <span class="font-orbitron">AmmA - 2015</span></h1>
     </header>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
