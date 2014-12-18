@@ -18,10 +18,19 @@
             <?php if ($site_name || $site_slogan): ?>
             <div<?php print $hgroup_attributes; ?>>
               <?php if ($site_name): ?>
-              <h1<?php print $site_name_attributes; ?>><?php print $site_name; ?></h1>
+              <h1<?php print $site_name_attributes; ?> class="site-name-orange"><?php print $site_name; ?></h1>
               <?php endif; ?>
               <?php if ($site_slogan): ?>
-              <h2<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?>
+              <h2<?php print $site_slogan_attributes; ?>>
+                <span class="site-slogan-small">
+                  International Conference on
+                  <span class="new-line">
+                    <span class="first-letter">A</span>dvances in
+                    <span class="first-letter">M</span>aterials,
+                    <span class="first-letter">M</span>anufacturing and
+                    <span class="first-letter">A</span>pplications</span>
+                  </span>
+                </span>
               <span id="conference-dates">April 9-11, 2015</span>
               </h2>
               

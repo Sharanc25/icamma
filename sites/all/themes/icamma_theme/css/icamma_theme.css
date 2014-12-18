@@ -7,15 +7,32 @@ BG - #edeef0 - Light blue
 #e25400 - Orange
 }*/
 /*============================================== Header =============================================*/
+#header-wrapper {
+    background: url("images/patterns/honeycomb.png") repeat;
+}
 #branding {
   padding: 25px 0;
 }
-header h1 span.new-line {
+header span.new-line {
   display: block;
 }
-header h1 span.first-letter {
+header h1 span.first-letter, header h2 span.first-letter {
   color: #e25400;
   font-weight:bold;
+}
+header h2 {
+    margin: 5px 0;
+}
+#site-slogan span#conference-dates {
+    display: block;
+    color: #e25400;
+}
+.site-name-orange a {
+    color: #e25400 !important;
+}
+header span.site-slogan-small {
+    font-size: 0.9em;
+    letter-spacing: 2px;
 }
 #logo  {
    opacity: 0;
@@ -42,9 +59,7 @@ span#conference-dates::selection {
 span#conference-dates::moz-selection {
     color: #fff;
 }
-#site-slogan span#conference-dates {
-    display: block;
-}
+
 #site-name a::selection {
     color: #fff;
 }
