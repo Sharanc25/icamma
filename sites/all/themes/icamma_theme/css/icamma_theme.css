@@ -41,6 +41,9 @@ header span.site-slogan-small {
   letter-spacing: 0;
   font-weight: bold;
 }
+h2 span.site-name-small {
+  font-size: 0.9em;
+}
 /* Slogan */
 .ssw-n #site-slogan, h2#site-slogan {
   font-weight: bold;

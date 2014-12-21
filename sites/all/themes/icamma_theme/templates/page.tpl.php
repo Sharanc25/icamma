@@ -31,7 +31,7 @@
                     <span class="first-letter">A</span>pplications</span>
                   </span>
                 </span>
-              <span id="conference-dates">April 9-11, 2015</span>
+              <span id="conference-dates" class="site-name-small">April 9-11, 2015</span>
               </h2>
               
               <?php endif; ?>
