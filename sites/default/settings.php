@@ -572,10 +572,10 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 // Require WWW.
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && 
   $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
-  if ($_SERVER['HTTP_HOST'] == 'yoursite.com' || 
-      $_SERVER['HTTP_HOST'] == 'live-yoursite.gotpantheon.com') {
+  if ($_SERVER['HTTP_HOST'] == 'amma2015.com' || 
+      $_SERVER['HTTP_HOST'] == 'live-amma2015.gotpantheon.com') {
     header('HTTP/1.0 301 Moved Permanently'); 
-    header('Location: http://www.yoursite.com'. $_SERVER['REQUEST_URI']); 
+    header('Location: http://www.amma2015.com'. $_SERVER['REQUEST_URI']); 
     exit();
   }
 }
