@@ -80,8 +80,10 @@ h1#page-title, .in-maintenance h1#page-title {
     padding: 14px;
     margin: 0;
 }
-h1#page-title span.font-orbitron {
+span.font-orbitron {
     font-family: 'Orbitron';
+}
+h1#page-title span.font-orbitron {
     font-size: 0.9em;
 }
 .content-style {
